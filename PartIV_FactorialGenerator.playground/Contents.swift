@@ -28,6 +28,8 @@ class FactorialGenerator: GeneratorType {
     // NOTE: When you are implementing this. Don't use somebody else's factorial function.
     // The whole point is to calculate each factorial result simply from the previous one.
     // E.g., if you have n! and you want (n+1)!, all your code has to do is multiple by n+1.
+    // HINT: I made this a ton easier by supplying the FibonacciGenerator example. It's
+    // like a template for a good solution.
 }
 
 let aFactorialGenerator = FactorialGenerator()

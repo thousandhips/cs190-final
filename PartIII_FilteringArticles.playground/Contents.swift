@@ -14,9 +14,9 @@
  
  Part III A) 2 pts. Finish the function titleContainsWord that takes a CollegianArticle and returns true if and only if the article's title contains the word.
  
- Part III B) 2 pts. Use filter and the function you just made to filter allArticles into annualsOnly.
+ Part III B) 2 pts. Filter allArticles into annualsOnly.
  
- HINT: title is a String, and Apple's Foundation code has a method on String called containsString that will do almost all the work. If you use that method you have very little code to write.
+ HINT: title is a String, and Apple's Foundation code has a method on String called containsString that will do almost all the work.
   */
 import Foundation
 
@@ -28,7 +28,7 @@ struct CollegianArticle {
 
 func titleContainsWordFunction(word: String) -> (CollegianArticle) -> Bool {
     func titleContainsWord(collegianArticle: CollegianArticle) -> Bool {
-        // ===> The following line is broken. This is where you do the work for Part III A. <===
+        // ===> The following line is broken. This is where you do the work for Part III A. It's a one-liner if you use the hint. <===
         return true
     }
     return titleContainsWord
@@ -43,9 +43,8 @@ let editorialReflectingBack = CollegianArticle(title: "Editorial: Reflecting bac
 
 let allArticles = [annualSpringConcert, annualOneActFestival, willinghamSpeaksOut, editorialReflectingBack]
 
-titleContainsAnnual(annualSpringConcert)
-
-// ===> The following line is broken. This is where you do the work for Part III B. <===
+// ===> The following let statement is 100% broken. This is where you do the work for Part III B. <===
+// To fix it, you should use filter. It's a one-liner once you figure out how to do that.
 let annualsOnly = allArticles
 
 /*:

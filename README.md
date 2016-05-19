@@ -17,11 +17,12 @@ Each Part is a playground and is worth 4 points. There are 5 playgrounds total. 
 
 It's a good idea to quit and restart Xcode when working on different parts and only work on one part at a time. Don't get bogged down on a part. If a part is taking you more than 15 minutes, move along.
 
-During the test now and then it's also a good idea to do
+Part I might be the hardest because you have to know some polynomials. If the polynomials are throwing you off, just go on to the other four parts. Come back later and read the links that I put into Part I, especially the link to the definition of Bezier curves.
+
+Finally, during the test it's a good idea to occasionally do:
 
     $ git add --all
     $ git commit -m "Note to self about what you just accomplished."
     $ git push origin master
 
 That way you won't lose much work if Xcode explodes.
-

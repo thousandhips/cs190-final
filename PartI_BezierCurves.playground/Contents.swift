@@ -4,7 +4,7 @@
 
  ## Directions
  
- There's a lot of stuff in this playground that I had to code to make it work. The only place you are going to have to make modifications is in test6Choose2 and exampleCurve.
+ There's a lot of stuff in this playground that I had to code to make it work. Despite all that, the only place you are going to have to make modifications is in test6Choose2 and exampleCurve.
  
  As usual, when you get it right, the test failures will go away.
  
@@ -88,7 +88,8 @@ class BezierTestSuite: XCTestCase {
     }
     
     func test6Choose2() {
-        XCTAssertEqual(1, 2, "Obviously this will always fail. Replace it with the right test. The previous test is a good example. When you have the right test, one test case failure should go away.")
+        // The previous test case is a good example.
+        XCTAssertEqual(1, 2, "Obviously this will always fail. Replace it with the right test. When you have the right test, one test case failure should go away.")
     }
     
     func testExampleCurveAtEnd() {
