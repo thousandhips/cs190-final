@@ -3,7 +3,7 @@
  
  ## Directions
  
-In this playground your job is to implement saferFactorial(). It will handle a special case correctly, and it will throw exceptions in the cases it can't handle.
+In this playground your job is to implement saferFactorial(). It should handle the n=0 special case correctly, and it should throw exceptions in the cases it can't handle.
 
 In the lecture three weeks ago, we learned about exceptions, and I made [a playground on exceptions]( https://github.com/brianhill/generics-enumerations-exceptions ). You could look at that playground if you don't quite remember the syntax for throwing an exception.
  */
@@ -21,19 +21,22 @@ func factorial(n: Int) -> Int {
  
 The above function has three issues.
 
-(1) It should return 1 when n = 0. Instead it explodes.
+(1) It should return 1 when n = 0. Instead it causes the program to crash.
 
-(2) It should throw an exception if you give it a negative n.
+(2) It should throw an exception if you give it a negative n. Instead negative n also causes the program to crash.
 
-(3) It should throw an exception if you give it too large an n. The maximum acceptable value is 20.
+(3) It should throw an exception if you give it too large an n. The maximum acceptable value is 20. The program crashes if you give it n=21.
+ 
+So let's define the error types that will be thrown in the cases it can't handle:
  */
 enum FactorialError: ErrorType {
     case TooLarge
     case Meaningless
 }
 
+// And here is the function for you to implement:
+
 func saferFactorial(n: Int) throws -> Int   {
-    // HINT: One way to do this is to write three guard statements -- one to take care of each of the problems.
     return 1
 }
 
