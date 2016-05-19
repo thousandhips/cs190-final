@@ -29,7 +29,7 @@ func estimatedPosition(startingLocation startingLocation: CLLocation, endingLoca
     let endingLatitude = endingLocation.coordinate.latitude
     let estimatedLongitude = startingLongitude + fraction * (endingLongitude - startingLongitude)
     let estimatedLatitude = startingLatitude + fraction * (endingLatitude - startingLatitude)
-    let locationResult = CLLocation(latitude: 0, longitude: 0)
+    let locationResult = CLLocation(latitude: estimatedLatitude, longitude: estimatedLongitude)
     return locationResult
 }
 
@@ -37,7 +37,7 @@ func estimatedPosition(startingLocation startingLocation: CLLocation, endingLoca
 func estimatedFlightPositionFunction(flight: Flight) -> (CFAbsoluteTime) -> CLLocation {
     // You can fix this function by changing only one line if you use the function you fixed in Part II A!
     func functionToReturn(currentTime: CFAbsoluteTime) -> CLLocation {
-        let locationResult = CLLocation(latitude: 0, longitude: 0)
+        let locationResult = estimatedPosition(startingLocation: flight.startingAirportLocation, endingLocation: flight.endingAirportLocation, startTime: flight.startTime, duration: flight.duration, currentTime: currentTime)
         return locationResult
     }
     return functionToReturn

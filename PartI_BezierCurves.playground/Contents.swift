@@ -70,8 +70,11 @@ let P4: Point = (5, 4)
 func exampleCurve(t: Float) -> Point {
     let b0 = bernsteinPolynomial(0, 4)(t)
     let b1 = bernsteinPolynomial(1, 4)(t)
+    let b2 = bernsteinPolynomial(2, 4)(t)
+    let b3 = bernsteinPolynomial(3, 4)(t)
+    let b4 = bernsteinPolynomial(4, 4)(t)
     
-    return (b0 * P0.x + b1 * P1.x, b0 * P0.y + b1 * P1.y)
+    return (b0 * P0.x + b1 * P1.x + b2 * P2.x + b3 * P3.x + b4 * P4.x, b0 * P0.y + b1 * P1.y + b2 * P2.y + b3 * P3.y + b4 * P4.y)
 }
 
 /*:
@@ -88,8 +91,9 @@ class BezierTestSuite: XCTestCase {
     }
     
     func test6Choose2() {
-        // The previous test case is a good example.
-        XCTAssertEqual(1, 2, "Obviously this will always fail. Replace it with the right test. When you have the right test, one test case failure should go away.")
+        let expectedResult = 15
+        let result = binomialCoefficient(6, 2)
+        XCTAssertEqual(expectedResult, result, "Obviously this will always fail. Replace it with the right test. When you have the right test, one test case failure should go away.")
     }
     
     func testExampleCurveAtEnd() {

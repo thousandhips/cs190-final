@@ -29,7 +29,7 @@ struct CollegianArticle {
 func titleContainsWordFunction(word: String) -> (CollegianArticle) -> Bool {
     func titleContainsWord(collegianArticle: CollegianArticle) -> Bool {
         // ===> The following line is broken. This is where you do the work for Part III A. It's a one-liner if you use the hint. <===
-        return true
+        return collegianArticle.title.containsString(word)
     }
     return titleContainsWord
 }
@@ -45,7 +45,7 @@ let allArticles = [annualSpringConcert, annualOneActFestival, willinghamSpeaksOu
 
 // ===> The following let statement is 100% broken. This is where you do the work for Part III B. <===
 // To fix it, you should use filter. It's a one-liner once you figure out how to do that.
-let annualsOnly = allArticles
+let annualsOnly = allArticles.filter(titleContainsAnnual)
 
 /*:
  ## Unit Tests
